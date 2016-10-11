@@ -62,9 +62,9 @@ $query->bind_param("ssisssisi", $nama, $tempatl, $tanggall, $gender, $alamat, $f
 $result=$query->execute();
 
 if( $result)
-	echo "<P style="margin-left:100px;">Data mahasiswa berhasil diupdate</p>";
+	echo "<p>Data mahasiswa berhasil diupdate</p>";
 else
-	echo "<p style="margin-left:100px;">Gagal update Data Mahasiswa</p>";
+	echo "<p>Gagal update Data Mahasiswa</p>";
  ?>
 </body>
 </html>
