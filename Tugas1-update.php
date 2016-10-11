@@ -23,7 +23,7 @@
 require_once"db.php";
 $conn=konek_db();
 if(!isset($_GET["nim"]))
-	die("<p style="margin-left:100px;">Nim tidak ditemukan</p>");
+	die("<p>Nim tidak ditemukan</p>");
 
 $nim=$_GET["nim"];
 $query = $conn->prepare("select*from mahasiswa where nim = ?");
@@ -66,5 +66,6 @@ if( $result)
 else
 	echo "<p>Gagal update Data Mahasiswa</p>";
  ?>
+ <p><a href="Tugas1-read.php"><button style="margin-left:100px;">Back</button></a></p>
 </body>
 </html>
