@@ -1,6 +1,17 @@
-html, body { margin: 0; }
+html { margin: 0; }
 
-
+body {
+	background: #0048B3 url(uph.gif);
+	background-position:center;
+    background-color: #cccccc;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	width:100%;
+	margin:0;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-variant:small-caps;
+	
+	}
 table, td, th {
     border: 1px solid black;
     padding: 0.2em;
