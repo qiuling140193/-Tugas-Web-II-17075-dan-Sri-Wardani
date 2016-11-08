@@ -15,8 +15,11 @@
 	font-variant:small-caps;
 	margin-left: :0;
 }
-
-	div{
+	form label { display: inline-block; min-width: 200px; 
+		top:100px;
+		margin-left: :100px;}
+		form div {margin-left: 50px;}
+	/*#men{
 	background-color:black;
     color:Red;
     text-align:center;
@@ -29,10 +32,11 @@
 	font-variant:small-caps;
 	font-size:50px;
 	position:fixed;
-	}
+	}*/
 	h1{
 		text-align: center;
 	}
+
 	th,td{
 		padding-left: 20px;
 	}
@@ -54,12 +58,12 @@
     font-variant:small-caps;
     font-size:50px;
     position:fixed;
-    }
+    }*/
 	</style>
 
 </head>
 <body>
-<div> Tugas I </div>
+<div id="header"> Tugas I </div>
 {% block body %}{% endblock %}
 </body>
 </html>
