@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contoh Array</title>
+	<meta charset=UTF-8>
+</head>
+<body>
+	<script type="text/javascript">
+	//array 1 dimensi
+		nama = new Array("Budi","Agus","Iwan");
+		nilai=[80,90,70];
+
+		daftarNilai=[["Budi", 70, 80, 90],
+					["Agus", 60, 90, 80],
+					["Iwan", 50, 70, 80]];
+						
+			function displayOL(label,array){
+				document.write("<p>" +label+ "</p>");
+				document.write("<ol>");
+				for(i=0; i<array.length; i++)
+					document.write("<li>" + array[i] + "</li>");
+				document.write("</ol>");
+			}		
+			displayOL("Nama", nama);
+			displayOL("Nilai", nilai);
+
+			document.write("<p>Daftar Nilai</p>");
+			document.write("<table");
+			document.write("<tr><td>Nama </td> <td>Tugas </td><td>UTS </td><td>UAS </td></tr>");
+			for (row in daftarNilai){
+				document.write("<tr>");
+				for(col in daftarNilai[row]){
+					document.write("<td>" +daftarNilai[row][col] + "</td>");
+				}
+				document.write("</tr>");
+			}
+			document.write("</table>");
+			nama.push("Susi");
+			displayOL("Nama",nama);
+			nama.unshift("Tuti");
+			displayOL("Nama", nama);
+			n=nama.pop();
+			document.write("pop:" +n+"<br>");
+			n=nama.shift();
+			document.write("shift:" +n+"<br>");
+			document.write("<p>Nama :" +nama.join(",")+"</p>");
+			nama = "Susi,Tuti,Ami".split(",");
+			displayOL("Nama",nama);
+		</script>
+</body>
+</html>
