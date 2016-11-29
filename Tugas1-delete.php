@@ -13,6 +13,7 @@ $nim   = $_GET["nim"];
 $query = $conn->prepare("delete from mahasiswa where nim=?");
 $query->bind_param("i", $nim);
 $result = $query->execute();
+
 if ($result)
     echo $twig->render("delete.html", array("pesan"=>"Data Mahasiswa berhasil dihapus"));
 else
