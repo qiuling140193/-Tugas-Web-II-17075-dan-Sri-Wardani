@@ -1,7 +1,7 @@
 {% extends "parent.html" %}
 {% block body %}
 <h1 style="margin-left:100px;">Data Mahasiswa</h1>
-
+    
     <form method="post" action="Tugas1-create.php" enctype="multipart/form-data">
         <div>
             <label>Nim:</label>
@@ -41,9 +41,39 @@
         </div>
 
         <div>
-            <input type="submit" value="Tambah">
+            <button onsubmit="return hello()">Input</button>
+            <div id="output"></div>
+
+            <script type="text/javascript">
+        function hello(){
+            var hasil = false;
+            ajax=new XMLHttpRequest();
+            var nama = document.getElementById("nama");
+            var output=document.getElementById("output");
+
+            ajax.onreadystatechange=function(){
+        //console.log(ajax.readyState);
+        if(ajax.readyState==4){
+            console.log("Sudah Dapat Balasan Dari server",ajax.status);
+            if(ajax.status==200){
+                output.innerHTML=ajax.responseText;
+            }else{
+                output.innerHTML="Error("+ ajax.status+")";
+            }
+            hasil = true;
+        }else{
+            output.innerHTML="Waiting...";
+        }
+        }
+        ajax.open("get","Tugas1-create.php?nama="+ nama.value,true);
+        ajax.send();
+        nama.value="";
+        nama.focus();        
+        return hasil;
+    }
+    </script>
         </div>
     </form>
-
+    <a href="Tugas1-read.php"><button style="margin-left:500px;">Back</button></a>
 
 {% endblock %}

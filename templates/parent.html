@@ -6,8 +6,8 @@
 
 	<style>
 	body {
+	background:white url(uph.gif);
 	background-position:center;
-    background-color: white;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	margin-top:100px;
@@ -17,22 +17,10 @@
 }
 	form label { display: inline-block; min-width: 200px; 
 		top:100px;
-		margin-left: :100px;}
-		form div {margin-left: 50px;}
-	/*#men{
-	background-color:black;
-    color:Red;
-    text-align:center;
-    position:fixed;
-	top: 0;
-	overflow: hidden;
-	width:1350px;
-	height:70px;
-	font-family:harrington;
-	font-variant:small-caps;
-	font-size:50px;
-	position:fixed;
-	}*/
+		margin-left: :200px;
+		padding-top: 15px;}
+		form div {margin-left: 500px;}
+
 	h1{
 		text-align: center;
 	}
@@ -65,5 +53,6 @@
 <body>
 <div id="header"> Tugas I </div>
 {% block body %}{% endblock %}
+{% block javascript %}{% endblock %}
 </body>
 </html>
