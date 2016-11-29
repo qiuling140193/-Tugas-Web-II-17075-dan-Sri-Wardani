@@ -1,8 +1,67 @@
-{% extends "parent.html" %}
-{% block body %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>Tugas I</title>
 
-<h1 style="margin-left:100px;">Data Mahasiswa</h1>
-<a href="Tugas1-create.php">Mahasiswa</a><br>
+	<style>
+	body {
+		background:white url(templates/uph.gif);
+	background-position:center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	margin-top:90px;
+	font-family: Comic Sans MS;
+	font-variant:small-caps;
+	margin-left: :0;
+}
+	form label { display: inline-block; min-width: 200px; 
+		top:100px;
+		margin-left: :100px;}
+		form div {margin-left: 50px;}
+	
+	h1{
+		text-align: center;
+		font-size: 75px;
+
+	}
+
+	th,td{
+		padding-left: 20px;
+	}
+	button{
+		text-align: :center;
+		height: 30px;
+		width:70px;
+	}
+	#header{
+    background-color:black;
+    color:Red;
+    text-align:center;
+    position:fixed;
+    top: 0;
+    overflow: hidden;
+    width:1350px;
+    height:70px;
+    font-family:harrington;
+    font-variant:small-caps;
+    font-size:50px;
+    position:fixed;
+    }
+    a{
+    	text-decoration: none;
+    	font-size: 50px;
+    	margin-left: 350px;
+    }
+	</style>
+
+</head>
+<body>
+<div id="header"> Tugas I </div>
+<h1>Data Mahasiswa</h1>
+<a href="Tugas1-create.php">Input</a>
+<a href="Tugas1-read.php">View</a>
 
 
-{% endblock %}
+</body>
+</html>

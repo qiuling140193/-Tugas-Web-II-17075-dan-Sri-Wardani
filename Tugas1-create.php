@@ -37,9 +37,13 @@ if (isset($_POST["nim"]) && isset($_POST["nama"])  && isset($_POST["tempat_lahir
 
     // jalankan query
     $result = $query->execute();
-    if (! $result)
-        echo $twig->render("error.html", array("pesan"=>"Query Gagal"));
 
-    echo "<p>Data Mahasiswa berhasil ditambahkan.</p>";
+    if( isset($_GET["nama"]))
+   echo $twig->render("delete.html", array("pesan"=>"Data Mahasiswa dengan $nama gagal ditambahkan"));
+else
+    sleep(5);
+echo $twig->render("delete.html", array("pesan"=>"Data Mahasiswa bernama $nama berhasil ditambahkan"));
+
 }
+
     ?>

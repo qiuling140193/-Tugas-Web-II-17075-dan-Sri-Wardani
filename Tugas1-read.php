@@ -41,5 +41,6 @@
 			}*/
 		?>
  	</table>  
-	 <a href='Tugas1-create.php' ><button style="margin-left:100px;">Add</button></a>
+ 	<p></p>
+	 <a href='Tugas1-create.php' ><button style="margin-left:100px;">Add</button></a><a href='Tugas1-menu.html' ><button style="margin-left:200px;">Back</button></a>
 

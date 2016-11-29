@@ -16,6 +16,6 @@ $result = $query->execute();
 if ($result)
     echo $twig->render("delete.html", array("pesan"=>"Data Mahasiswa berhasil dihapus"));
 else
-    echo "<p>Gagal hapus Data Mahasiswa</p>";
+    echo $twig->render("delete.html", array("pesan"=>"Data Mahasiswa gagal dihapus"));
 ?>
     <p><a href="Tugas1-read.php"><button style="margin-left:100px;">Back</button></a></p>
