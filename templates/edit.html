@@ -1,8 +1,8 @@
 {% extends "parent.html" %}
 {% block body %}
 
-<form method="post" action="Tugas1-update.php?nim={{data.nim}}" style="margin-left:100px;">
- <h1 style="margin-left:70px;">Edit Data Mahasiswa</h1>
+<form method="post" action="Tugas1-update.php?nim={{data.nim}}" >
+ <h1>Edit Data Mahasiswa</h1>
  	<div>
  		<label>Nim :</label>
  		<span>{{data.nim}}</span>
@@ -40,8 +40,7 @@
  		<input type="text" name="email" value="{{data.email}}">
  	</div>
  	<div><input type="submit" value="Update"></div>
-
  </form>
-
- <a href="Tugas1-read.php"><button style="margin-left:110px; margin-top: 30px;">Cancel</button></a>
+ 	<a href="Tugas1-read.php"><button style="margin-left:500px; margin-top: 30px;">Cancel</button></a>
+ 
  {% endblock %}
